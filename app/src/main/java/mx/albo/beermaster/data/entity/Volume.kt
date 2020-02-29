@@ -1,3 +1,7 @@
 package mx.albo.beermaster.data.entity
 
-data class Volume(val value:Float, val unit:String)
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+data class Volume(val value:Float?, val unit:String) : Parcelable

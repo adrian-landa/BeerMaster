@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/dimen_short"
+    app:cardElevation="@dimen/dimen_short">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV30"
+            android:layout_width="@dimen/dimen_xxxshort"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.30" />
+
+        <ImageView
+            android:id="@+id/imgBeer"
+            android:layout_width="@dimen/dimen_adjustable"
+            android:layout_height="@dimen/dimen_xxxlarge"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/guidelineV30"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_placeholder_beer" />
+
+        <TextView
+            android:id="@+id/tvBeerName"
+            style="@style/Subtitle"
+            android:layout_width="@dimen/dimen_adjustable"
+            android:layout_margin="@dimen/dimen_short"
+            app:layout_constraintBottom_toTopOf="@+id/tvBeerTagline"
+            app:layout_constraintLeft_toRightOf="@id/guidelineV30"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+
+            tools:text="Nombre: Cerveza" />
+
+        <TextView
+            android:id="@+id/tvBeerTagline"
+            style="@style/Subtitle"
+            android:layout_width="@dimen/dimen_adjustable"
+            android:layout_margin="@dimen/dimen_short"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/guidelineV30"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBeerName"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Tagline: Cerveza" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

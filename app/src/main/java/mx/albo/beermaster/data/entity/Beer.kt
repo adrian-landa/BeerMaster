@@ -1,26 +1,30 @@
 package mx.albo.beermaster.data.entity
 
+import android.os.Parcelable
 import com.squareup.moshi.Json
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Beer(
     val id: Int,
     val name: String,
-    val tagline: String,
+    val tagline: String?,
     @field:Json(name = "first_brewed")
-    val firstBrewed: String,
-    val description: String,
+    val firstBrewed: String?,
+    val description: String?,
     @field:Json(name = "image_url")
     val imageUrl: String,
-    val abv: Double,
-    val ibu: Int,
+    val abv: Float?,
+    val ibu: Float?,
     @field:Json(name = "target_fg")
-    val target_fg: Int,
+    val targetFG: Float?,
     @field:Json(name = "target_og")
-    val target_og: Int,
-    val ebc: Int,
-    val srm: Int,
-    val ph: Double,
-    val attenuationLevel: Int,
+    val targetOG: Float?,
+    val ebc: Float?,
+    val srm: Float?,
+    val ph: Float?,
+    @field:Json(name = "attenuation_level")
+    val attenuationLevel: Float?,
     val volume: Volume,
     @field:Json(name = "boil_volume")
     val boilVolume: Volume,
@@ -31,5 +35,5 @@ data class Beer(
     @field:Json(name = "brewers_tips")
     val brewersTips: String,
     @field:Json(name = "contributed_by")
-    val contributed_by: String
-)
+    val contributedBy: String
+) : Parcelable

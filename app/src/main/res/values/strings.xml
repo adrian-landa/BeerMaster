@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">BeerMaster</string>
+    <string name="label_na">N/A</string>
+    <string name="label_beer_title">Beer List</string>
+
+    <string name="label_beer_name">Name: %1$s </string>
+    <string name="label_beer_tagline">Tagline: %1$s </string>
+    <string name="label_beer_description">Description: %1$s </string>
+    <string name="label_beer_brewed_date">First Brewed Data: %1$s </string>
+    <string name="label_beer_food_pairing">Food Pairing: %1$s</string>
+    <string name="label_wrong">Something Went Wrong!\n Swipe down to try again</string>
+
 </resources>

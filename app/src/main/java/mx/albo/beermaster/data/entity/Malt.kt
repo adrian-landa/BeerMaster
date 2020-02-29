@@ -1,5 +1,7 @@
 package mx.albo.beermaster.data.entity
 
-import java.util.*
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
-data class Malt(val name: String, val amount: Quantity)
+@Parcelize
+data class Malt(val name: String, val amount: Quantity) : Parcelable
